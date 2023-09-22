@@ -1,10 +1,10 @@
 @extends('layouts.template')
 
-@section('title', 'Proyectos')
+@section('title', 'Projects')
 
 @section('content')
-    <h1>Proyectos</h1>
-
+    <h1>{{__('Projects')}}</h1>
+    <a href="{{ route('project.create') }}">Crear Proyecto</a>
     <ul>
         @forelse ($projects as $project)
             <li><a href="{{route('project.show', $project)}}">{{ $project->title }}</a> - {{ $project->created_at->diffForHumans() }} <br>

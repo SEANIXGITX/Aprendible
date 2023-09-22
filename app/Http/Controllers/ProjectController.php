@@ -26,7 +26,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('projects.create');
     }
 
     /**
@@ -37,7 +37,16 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Project::create(request()->all()); // solo usar con proteccion fillable
+        $fields = request()->validate([
+            'title' => 'required',
+            'url' => 'required',
+            'description' => 'required'
+        ]);
+
+        Project::create($fields); // sin proteccion guard o fillable
+
+        return redirect()->route('project.index');
     }
 
     /**
