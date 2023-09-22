@@ -38,5 +38,6 @@
     "Send": "Enviar",
     "create": "crear",
     "edit": "editar",
-    "I need your name": "Necesito tu nombre"
+    "I need your name": "Necesito tu nombre",
+    "Project needs a title": "El proyecto necesita un título"
 }
