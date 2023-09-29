@@ -21,9 +21,10 @@ class MessageController extends Controller
         // Enviar email
         Mail::to('seanixgx@gmail.com')->queue(new MessageReceived($message));
 
-        return "Mensaje enviado";
+        // return "Mensaje enviado";
 
         // return new MessageReceived($message);
 
+        return back()->with('status', 'Recibimos tu mensaje, te responderemos en menos de 24 horas.');
     }
 }

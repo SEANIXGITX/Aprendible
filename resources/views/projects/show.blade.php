@@ -4,6 +4,7 @@
 
 @section('content')
     <h1>{{ $project->title }}</h1>
+
     <a href="{{ route('project.edit', $project) }}">{{ __('Edit') }}</a>
 
     <form method="POST" action="{{ route('project.destroy', $project) }}">
