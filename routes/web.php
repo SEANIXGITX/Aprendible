@@ -20,3 +20,6 @@ Route::post('contact', 'MessageController@store')->name('messages.store');
 Route::resource('portafolio', 'ProjectController')
     ->names('project')
     ->parameters(['portafolio' => 'project']);
+
+// Auth::routes(['register' => false]);
+Auth::routes();
