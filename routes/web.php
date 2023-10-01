@@ -18,8 +18,9 @@ Route::view('/contacto', 'contact')->name('contact');
 Route::post('contact', 'MessageController@store')->name('messages.store');
 
 Route::resource('portafolio', 'ProjectController')
-    ->names('project')
-    ->parameters(['portafolio' => 'project']);
+    ->parameters(['portafolio' => 'project'])
+    ->names('project');
+// ->middleware('auth');
 
 // Auth::routes(['register' => false]);
 Auth::routes();
